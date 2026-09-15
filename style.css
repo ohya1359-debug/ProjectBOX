@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button, input, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ===== 変数 ===== */
+:root {
+  --black: hsl(250, 56%, 11%);
+  --white: hsl(0, 0%, 100%);
+  --stone300: hsl(33, 20%, 82%);
+  --green: hsl(154, 87%, 28%);
+  --blue: hsl(220, 80%, 55%);
+  --purple: hsl(278, 84%, 57%);
+  --nagato: hsl(73, 96%, 49%);
+  --nagatoB: hsl(73, 17%, 90%);
+
+}
+
+/* ===== ベース ===== */
+body {
+    background-color: var(--black);
+    font-size: 17px;
+    color: var(--white);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 12px;
+    border-bottom: 1px solid var(--nagato);
+    align-items: center;
+}
+
+.header__icons {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.title__accent {
+    font-size: 700;
+    color: var(--nagato);
+}
+.header__image {
+    width: 35px;
+    height: 35px;
+}
+
+.header__button {
+    background-color: var(--black);
+    color: var(--nagato);
+    padding: 10px 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: 1px solid var(--nagato);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--nagato);
+    min-height: 565px;
+}
+
+.card {
+    max-width: 380px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black);
+    border-radius: 20px;
+    border: 1px solid var(--nagato);
+    padding: 10px 10px;
+}
+
+.card__image {
+    max-width: 380px;
+    min-height: 100px;
+    border-radius: 20px;
+}
+
+.card__labels{
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.card__label {
+    text-decoration: none;
+    font-size: 9px;
+    font-weight: 500;
+    padding: 3px 6px;
+    border-radius: 999px;
+}
+
+.card__label--live {
+    background-color: var(--green);
+    color: hsl(133, 82%, 70%);
+}
+
+.card__label--ios {
+    background-color: var(--blue);
+    color: hsl(220, 76%, 87%);
+}
+
+.card__label--fitness {
+    background-color: var(--purple);
+    color: hsl(283, 52%, 89%);
+}
+
+.card__title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.card__text {
+    font-size: 12px;
+    color: var(--stone300);
+}
+
+.card__button {
+    background-color: var(--black);
+    color: var(--nagato);
+    font-weight: 700;
+    border-radius: 20px;
+    border: 1px solid var(--nagato);
+    text-decoration: none;
+    padding: 2px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.footer {
+    font-size: 12px;
+    color: var(--nagato);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__coder {
+    color: var(--white);
+}
