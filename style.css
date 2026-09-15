@@ -70,6 +70,7 @@ body {
     border-radius: 20px;
     text-decoration: none;
     border: 1px solid var(--nagato);
+    font-size: 12px;
 }
 
 .hero {
@@ -78,7 +79,7 @@ body {
     justify-content: center;
     padding: 20px 32px;
     border-bottom: 1px solid var(--nagato);
-    min-height: 565px;
+    min-height: 670px;
 }
 
 .card {
@@ -116,7 +117,7 @@ body {
 
 .card__label--live {
     background-color: var(--green);
-    color: hsl(133, 82%, 70%);
+    color: hsl(77, 42%, 82%);
 }
 
 .card__label--ios {
@@ -151,12 +152,21 @@ body {
     text-align: center;
 }
 
+.card__button a:hover,
+.card__button a:focus-visible {
+    background-color: var(--nagato);
+    color: var(--black);
+
+}
+
 .footer {
     font-size: 12px;
     color: var(--nagato);
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    padding:5px 12px;
 }
 
 .footer__coder {
