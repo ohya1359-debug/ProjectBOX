@@ -37,6 +37,9 @@ body {
     background-color: var(--black);
     font-size: 17px;
     color: var(--white);
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -55,7 +58,7 @@ body {
 }
 
 .title__accent {
-    font-size: 700;
+    font-weight: 700;
     color: var(--nagato);
 }
 .header__image {
@@ -73,13 +76,25 @@ body {
     font-size: 12px;
 }
 
+.header__button:hover,
+.header__button:focus-visible {
+    background-color: var(--nagato);
+    color: var(--black);
+}
+
 .hero {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 20px 32px;
     border-bottom: 1px solid var(--nagato);
-    min-height: 670px;
+}
+
+.cards {
+    max-width: 380px;
+    width: 100%;
+    margin-inline: auto;
 }
 
 .card {
@@ -87,6 +102,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    text-align: center;
     background-color: var(--black);
     border-radius: 20px;
     border: 1px solid var(--nagato);
@@ -105,10 +121,10 @@ body {
     gap: 8px;
     flex-wrap: wrap;
     margin-top: 10px;
+    justify-content: center;
 }
 
 .card__label {
-    text-decoration: none;
     font-size: 9px;
     font-weight: 500;
     padding: 3px 6px;
@@ -117,17 +133,17 @@ body {
 
 .card__label--live {
     background-color: var(--green);
-    color: hsl(77, 42%, 82%);
+    color: hsl(0, 0%, 100%);
 }
 
 .card__label--ios {
     background-color: var(--blue);
-    color: hsl(220, 76%, 87%);
+    color: hsl(0, 0%, 100%);
 }
 
 .card__label--fitness {
     background-color: var(--purple);
-    color: hsl(283, 52%, 89%);
+    color: hsl(0, 0%, 100%);
 }
 
 .card__title {
@@ -141,31 +157,37 @@ body {
 }
 
 .card__button {
-    background-color: var(--black);
-    color: var(--nagato);
+    background: linear-gradient(90deg, var(--purple), var(--green));
+    color: var(--white);
     font-weight: 700;
+    font-size: 14px;
     border-radius: 20px;
-    border: 1px solid var(--nagato);
     text-decoration: none;
-    padding: 2px;
+    padding: 12px 48px;
     margin-top: 12px;
-    text-align: center;
+    transition: opacity 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
 }
 
-.card__button a:hover,
-.card__button a:focus-visible {
-    background-color: var(--nagato);
-    color: var(--black);
+.card__button-text {
+    flex: 1;
+    text-align: center;
+}
+.card__button-arrow {
+    flex-shrink: 0;
+}
 
+.card__button:hover,
+.card__button:focus-visible {
+    opacity: 0.9;
+    transform: translateY(-2px);
 }
 
 .footer {
     font-size: 12px;
     color: var(--nagato);
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding:5px 12px;
 }
 
