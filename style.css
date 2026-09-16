@@ -32,12 +32,16 @@ img {
 
 }
 
+html {
+    background-color: var(--black);
+}
+
 /* ===== ベース ===== */
 body {
     background-color: var(--black);
     font-size: 17px;
     color: var(--white);
-    min-height: 100dvh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     font-family: "Space Grotesk", "Hiragino Sans", "Noto Sans JP", sans-serif;
@@ -87,6 +91,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     padding: 20px 32px;
     border-bottom: 1px solid var(--nagato);
